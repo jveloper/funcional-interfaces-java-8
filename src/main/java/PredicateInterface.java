@@ -10,7 +10,7 @@ public class PredicateInterface {
         Predicate<String> containsA = name -> name.contains("a");
         Predicate<String> greaterThan5 = name -> name.length() > 5;
 
-        Stream<String> listA = list.filter(containsA.and(containsA));
+        Stream<String> listA = list.filter(containsA.and(greaterThan5));
         listA.forEach(System.out::println);
 
     }
